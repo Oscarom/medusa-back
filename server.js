@@ -27,7 +27,7 @@ connection.connect(err => {
 const UserModel = {
   getAllUsers: () => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM users', (err, results) => {
+      connection.query('SELECT * FROM productos', (err, results) => {
         if (err) {
           reject(err);
         } else {
@@ -39,10 +39,10 @@ const UserModel = {
 };
 
 // Ruta para obtener todos los usuarios
-app.get('/api/users', async (req, res) => {
+app.get('/api/productos', async (req, res) => {
   try {
-    const users = await UserModel.getAllUsers();
-    res.json(users);
+    const productos = await UserModel.getAllUsers();
+    res.json(productos);
   } catch (error) {
     console.error('Error al obtener usuarios: ', error);
     res.status(500).json({ error: 'Error al obtener usuarios' });

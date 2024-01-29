@@ -15,6 +15,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Ruta para agregar un producto a la lista de productos
+
 router.post('/:listId/addProduct/:productId', async (req, res) => {
   const { listId, productId } = req.params;
   try {
@@ -25,6 +27,8 @@ router.post('/:listId/addProduct/:productId', async (req, res) => {
     res.status(500).json({ error: 'Error al agregar producto a la lista' });
   }
 });
+
+// Ruta para eliminar un producto de la lista de productos
 
 router.delete('/:listId/removeProduct/:productId', async (req, res) => {
   const { listId, productId } = req.params;

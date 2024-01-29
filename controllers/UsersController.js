@@ -4,7 +4,7 @@ import UsersModel from '../models/UsersModel.js';
 const UsersController = {
   getAllUsers: async () => {
     try {
-      const users = await UsersModel.getAllList();
+      const users = await UsersModel.getAllUsers();
       return users;
     } catch (error) {
       throw error;

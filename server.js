@@ -12,8 +12,8 @@ app.use(cors({ origin: '*' }));
 
 // Utilizar las rutas para productos
 app.use('/api/productos', productsRoutes);
-app.use('/api/lists', listsRoutes);
-app.use('/api/users', UsersRoutes);
+app.use('/api/listas', listsRoutes);
+app.use('/api/usuarios', UsersRoutes);
 
 // Iniciar el servidor
 app.listen(port, () => {

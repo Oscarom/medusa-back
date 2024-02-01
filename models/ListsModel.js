@@ -4,7 +4,7 @@ import connection from '../config/database.js';
 const ListsModel = {
   getAllList: () => {
     return new Promise((resolve, reject) => {
-      connection.query('SELECT * FROM listas', (err, results) => {
+      connection.query('SELECT * FROM detalles_lista', (err, results) => {
         if (err) {
           reject(err);
         } else {

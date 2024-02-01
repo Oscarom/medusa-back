@@ -18,6 +18,14 @@ const ListsController = {
       throw error;
     }
   },
+  removeProductFromList: async (listId, productId) => {
+    try {
+      const result = await ListsModel.removeProductFromList(listId, productId);
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  },
 };
 
 export default ListsController;

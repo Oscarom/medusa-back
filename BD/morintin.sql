@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-01-2024 a las 22:14:16
+-- Tiempo de generación: 07-02-2024 a las 22:12:24
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -38,8 +38,17 @@ CREATE TABLE `detalles_lista` (
 --
 
 INSERT INTO `detalles_lista` (`detalle_id`, `lista_id`, `producto_id`) VALUES
-(1, 1, 1),
-(2, 1, 10);
+(3, 2, 5),
+(41, 1, 3),
+(42, 1, 5),
+(46, 1, 1),
+(47, 1, 1),
+(48, 1, 1),
+(50, 1, 3),
+(51, 1, 1),
+(53, 1, 4),
+(59, 1, 1),
+(60, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -58,7 +67,8 @@ CREATE TABLE `listas` (
 --
 
 INSERT INTO `listas` (`lista_id`, `nombre_lista`, `usuario_id`) VALUES
-(1, 'comida semana', 1);
+(1, 'comida semana', 1),
+(2, 'ejemplo2', 2);
 
 -- --------------------------------------------------------
 
@@ -80,24 +90,24 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`producto_id`, `nombre`, `categoria`, `precio`, `nombre_superm`, `image`) VALUES
-(1, 'Manzana', 'frutas', '$59.75', 'Soriana', 'https://thumbs.dreamstime.com/b/apple-rojo-aislado-con-el-camino-de-recortes-19130134.jpg'),
-(2, 'Durazno', 'frutas', '$50.11', 'Soriana', 'https://st.depositphotos.com/1076754/1743/v/450/depositphotos_17436069-stock-illustration-rpe-peach-isolated-on-white.jpg'),
-(3, 'Manzana', 'frutas', '$60.00', 'Chedraui', 'https://thumbs.dreamstime.com/b/apple-rojo-aislado-con-el-camino-de-recortes-19130134.jpg'),
-(4, 'Durazno', 'frutas', '$46.46', 'Walmart', 'https://st.depositphotos.com/1076754/1743/v/450/depositphotos_17436069-stock-illustration-rpe-peach-isolated-on-white.jpg'),
-(5, 'Durazno', 'frutas', '$55.54', 'Chedraui', 'https://st.depositphotos.com/1076754/1743/v/450/depositphotos_17436069-stock-illustration-rpe-peach-isolated-on-white.jpg'),
-(6, 'leche lala', 'lacteos', '$28.47', 'Walmart', 'https://comercializadorajm.com/wp-content/uploads/2021/01/3266.jpg'),
-(7, 'leche lala', 'lacteos', '$29.61', 'Chedraui', 'https://comercializadorajm.com/wp-content/uploads/2021/01/3266.jpg'),
-(8, 'leche lala', 'lacteos', '$31.02', 'Soriana', 'https://comercializadorajm.com/wp-content/uploads/2021/01/3266.jpg'),
-(9, 'Ariel', 'detergentes', '$45.44', 'Walmart', 'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/1/6/16620_1.jpg'),
-(10, 'Ariel', 'detergentes', '$39.59', 'Chedraui', 'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/1/6/16620_1.jpg'),
-(11, 'Ariel', 'detergentes', '$4.37', 'Soriana', 'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/1/6/16620_1.jpg'),
-(12, 'Zucaritas', 'cereales', '$85.61', 'Walmart', 'https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1391755_A_1280_AL.jpg'),
-(13, 'Zucaritas', 'cereales', '$87.00', 'Soriana', 'https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1391755_A_1280_AL.jpg'),
-(14, 'Zucaritas', 'cereales', '$78.51', 'Chedraui', 'https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1391755_A_1280_AL.jpg'),
-(15, 'Huevo Bachoco', 'alimentos', '$56.24', 'Soriana', 'https://media.justo.mx/products/Huevo_Bachoco_Blanco_30_pzas_2.jpg'),
-(16, 'Huevo Bachoco', 'alimentos', '$60.31', 'Walmart', 'https://media.justo.mx/products/Huevo_Bachoco_Blanco_30_pzas_2.jpg'),
-(17, 'Huevo Bachoco', 'alimentos', '$65.82', 'Chedraui', 'https://media.justo.mx/products/Huevo_Bachoco_Blanco_30_pzas_2.jpg'),
-(18, 'Azucar', 'insumos', '$35.32', 'Chedraui', 'https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00066144000005L.jpg');
+(1, 'Manzana', 'frutas', '59.75', 'Soriana', 'https://thumbs.dreamstime.com/b/apple-rojo-aislado-con-el-camino-de-recortes-19130134.jpg'),
+(2, 'Durazno', 'frutas', '50.11', 'Soriana', 'https://st.depositphotos.com/1076754/1743/v/450/depositphotos_17436069-stock-illustration-rpe-peach-isolated-on-white.jpg'),
+(3, 'Manzana', 'frutas', '60.00', 'Chedraui', 'https://thumbs.dreamstime.com/b/apple-rojo-aislado-con-el-camino-de-recortes-19130134.jpg'),
+(4, 'Durazno', 'frutas', '46.46', 'Walmart', 'https://st.depositphotos.com/1076754/1743/v/450/depositphotos_17436069-stock-illustration-rpe-peach-isolated-on-white.jpg'),
+(5, 'Durazno', 'frutas', '55.54', 'Chedraui', 'https://st.depositphotos.com/1076754/1743/v/450/depositphotos_17436069-stock-illustration-rpe-peach-isolated-on-white.jpg'),
+(6, 'leche lala', 'lacteos', '28.47', 'Walmart', 'https://comercializadorajm.com/wp-content/uploads/2021/01/3266.jpg'),
+(7, 'leche lala', 'lacteos', '29.61', 'Chedraui', 'https://comercializadorajm.com/wp-content/uploads/2021/01/3266.jpg'),
+(8, 'leche lala', 'lacteos', '31.02', 'Soriana', 'https://comercializadorajm.com/wp-content/uploads/2021/01/3266.jpg'),
+(9, 'Ariel', 'detergentes', '45.44', 'Walmart', 'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/1/6/16620_1.jpg'),
+(10, 'Ariel', 'detergentes', '39.59', 'Chedraui', 'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/1/6/16620_1.jpg'),
+(11, 'Ariel', 'detergentes', '54.37', 'Soriana', 'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/cache/23527bda4807566b561286b47d9060f4/1/6/16620_1.jpg'),
+(12, 'Zucaritas', 'cereales', '85.61', 'Walmart', 'https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1391755_A_1280_AL.jpg'),
+(13, 'Zucaritas', 'cereales', '87.00', 'Soriana', 'https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1391755_A_1280_AL.jpg'),
+(14, 'Zucaritas', 'cereales', '78.51', 'Chedraui', 'https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1391755_A_1280_AL.jpg'),
+(15, 'Huevo Bachoco', 'alimentos', '56.24', 'Soriana', 'https://media.justo.mx/products/Huevo_Bachoco_Blanco_30_pzas_2.jpg'),
+(16, 'Huevo Bachoco', 'alimentos', '60.31', 'Walmart', 'https://media.justo.mx/products/Huevo_Bachoco_Blanco_30_pzas_2.jpg'),
+(17, 'Huevo Bachoco', 'alimentos', '65.82', 'Chedraui', 'https://media.justo.mx/products/Huevo_Bachoco_Blanco_30_pzas_2.jpg'),
+(18, 'Azucar', 'insumos', '35.32', 'Chedraui', 'https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00066144000005L.jpg');
 
 -- --------------------------------------------------------
 
@@ -116,7 +126,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`user_id`, `email`, `contraseña`) VALUES
-(1, 'oscar@gmail.com', '12345');
+(1, 'oscar@gmail.com', '12345'),
+(2, 'omar_23@algo.com', '12345');
 
 --
 -- Índices para tablas volcadas
@@ -159,13 +170,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `detalles_lista`
 --
 ALTER TABLE `detalles_lista`
-  MODIFY `detalle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `detalle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT de la tabla `listas`
 --
 ALTER TABLE `listas`
-  MODIFY `lista_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `lista_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -177,7 +188,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas

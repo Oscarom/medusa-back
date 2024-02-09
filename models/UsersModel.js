@@ -13,9 +13,9 @@ const UsersModel = {
       });
     });
   },
-  addUser: (email, contraseña) => {
+  addUser: (nombre, email, password, token) => {
     return new Promise((resolve, reject) => {
-      connection.query('INSERT INTO usuarios (email, contraseña) VALUES (?, ?)', [email, contraseña], (err, results) => {
+      connection.query('INSERT INTO usuarios (nombre, email, password, token) VALUES (?, ?, ?, ?)', [nombre, email, password, token], (err, results) => {
         if (err) {
           reject(err);
         } else {

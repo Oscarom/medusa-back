@@ -10,9 +10,9 @@ const UsersController = {
       throw error;
     }
   },
-  addUser: async (email, contraseña) => {
+  addUser: async (nombre, email, password, token) => {
     try {
-      const result = await UsersModel.addUser(email, contraseña);
+      const result = await UsersModel.addUser(nombre, email, password, token);
       return result;
     } catch (error) {
       throw error;
